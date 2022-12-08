@@ -5,6 +5,9 @@ public class Main {
         task3();
         task4();
         task5();
+        task6();
+        task7();
+        task8();
     }
 
     public static void task1() {
@@ -44,6 +47,7 @@ public class Main {
         int sheetsToEach = sheets / (LP + AC + EA);
         System.out.println("На каждого ученика рассчитано " + sheetsToEach + " листов бумаги");
     }
+
     public static void task4() {
         System.out.println("Задача 4");
         byte machinePerformance = 8;
@@ -56,7 +60,59 @@ public class Main {
         int d = machinePerformance * 43200;
         System.out.println("За 1 месяц машина произвела " + d + " штук бутылок");
     }
+
     public static void task5() {
         System.out.println("Задача 5");
+        short totalCans = 120;
+        byte forOneClassWhite = 2;
+        byte forOneClassBrown = 4;
+        int numberOfClasses = totalCans / (forOneClassWhite + forOneClassBrown);
+        int totalWhite = numberOfClasses * forOneClassWhite;
+        int totalBrown = numberOfClasses * forOneClassBrown;
+        System.out.println("В школе, где " + numberOfClasses + " классов, нужно " + totalWhite + " банок белой краски и " + totalBrown + " банок коричневой краски");
+    }
+    public static void task6() {
+        System.out.println("Задача 6");
+        short bananas = 80 * 5;
+        short milk = 105 * 2;
+        short iceCream = 100 * 2;
+        short eggs = 70 * 4;
+        int breakfast = bananas + milk + iceCream + eggs;
+        float kg = breakfast / 1000f;
+        System.out.println("Вес завтрака " + breakfast + " грамм " + kg + " килограмм");
+    }
+    public static void task7() {
+        System.out.println("Задача 7");
+        short reset = 7000;
+        int min = reset / 250;
+        System.out.println("если спортсмен будет терять каждый день по 250 грамм, на похудение уйдет " + min + " дней");
+        int max = reset / 500;
+        System.out.println("если спортсмен будет терять каждый день по 500 грамм, на похудение уйдет " + max + " дней");
+        int average = (min + max) / 2;
+        System.out.println("в среднем может потребоваться " + average + " дней");
+    }
+    public static void task8() {
+        System.out.println("Задача 8");
+        int masha = 67760;
+        int denis = 83690;
+        int kristina = 76230;
+        int annualM1 = masha * 12;
+        int annualD1 = denis * 12;
+        int annualK1 = kristina * 12;
+        float increaseM = annualM1 * 0.1f;
+        float increaseD = annualD1 * 0.1f;
+        float increaseK = annualK1 * 0.1f;
+        float annualM2 = increaseM + annualM1;
+        float annualD2 = increaseD + annualD1;
+        float annualK2 = increaseK + annualK1;
+        float salaryM = annualM2 / 12f;
+        float salaryD = annualD2 / 12f;
+        float salaryK = annualK2 / 12f;
+        float differenceM = annualM2 - annualM1;
+        float differenceD = annualD2 - annualD1;
+        float differenceK = annualK2 - annualK1;
+        System.out.println("Маша теперь получает " + salaryM + " рублей. Годовой доход вырос на " + differenceM + " рублей");
+        System.out.println("Денис теперь получает " + salaryD + " рублей. Годовой доход вырос на " + differenceD + " рублей");
+        System.out.println("Кристина теперь получает " + salaryK + " рублей. Годовой доход вырос на " + differenceK + " рублей");
     }
 }
